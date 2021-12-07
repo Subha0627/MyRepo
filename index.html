@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link href="sb-admin-2.css" rel="stylesheet">
     <link href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.0/Chart.min.js"></script>
     
     <style>
         .packet{
@@ -72,6 +73,9 @@
                         <span>Setting</span>
                     </a>
                 </li>
+            <br>
+            <br>
+            <br>
             <div class="col">
                 <div class="card" style="max-width: 540px; ">
                     <br>
@@ -386,25 +390,32 @@
                 </div>
             </div>
                 <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Weather Graph</h6>
-                                    
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
+                    <div class="col-10" style="font-size:1.5em; color: black;"><b>Weather Graph</b></div>
+                    <div class="col-2" style="color: #979BF3; text-align: end;">Details More <i class= "fa fa-fw fa-arrow-right"></i></div>
+                </div>
+                <canvas id="line-chart" height="100" width="auto"></canvas>
+                <script>
+                    var ctx=new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+      
+    labels: [11,12,13,14,15,16,17,18,19,20,21,22,23,24],
+    datasets: [{ 
+        data: [-4,-7,-8,-6,-3,-4,-1,2,0,2,1,4,2,-1],
+        label: "London",
+        borderColor: "rgba(0, 55, 255, 0.5)",
+        fill: true,
+      }, 
+    ]
+  },
+  options: {
+    title: {
+      display: false,
+    }
+  }
+});
+                    
+</script>
                 
                 
                 
@@ -413,9 +424,6 @@
                 
                 
                 
-                
-                
-            </div>
         </div>
     </div>        
 </div>        
