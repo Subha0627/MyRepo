@@ -32,10 +32,11 @@
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                     <div class="navbar-brand">
-
-                        <img src="sunny.png" alt="logo" height="40" width="40">
+                        &nbsp;
+                        <img src="sunny.png" alt="logo" height="45" width="45">
+                        <div class="sidebar-brand-text mx-0" style="align-self: left;">Meterolog</div>
                     </div>
-                    <div class="sidebar-brand-text mx-3">Meterolog</div>
+                    
                 </a>
 
                 <!-- Divider -->
@@ -62,13 +63,13 @@
                 </li>
                 <!-- Nav Item - Calendar -->
                 <li class="nav-item">
-                    <a class="nav-link" href="charts.html">
+                    <a class="nav-link">
                         <i class="fa fa-fw fa-table"></i>
                 <span>Calendar</span></a>
                 </li>
                 <!-- Nav Item - Setting -->
                 <li class="nav-item">
-                    <a class="nav-link" href="tables.html">
+                    <a class="nav-link">
                         <i class="fa fa-fw fa-cog"></i>
                         <span>Setting</span>
                     </a>
@@ -196,7 +197,7 @@
                 </nav>
                 <!-- End of Topbar -->
                 <br>
-                <div style="font-size:1.5em; color: black;">Weather Forecast</div>
+                <div style="font-size:1.5em; color: black;"><b>Weather Forecast</b></div>
                 <br>
                 <div class="row row-cols-1 row-cols-md-5 g-4">
                     <div class="col">
@@ -302,7 +303,7 @@
                             <br>
                             <img src="sun.png" class="card-image-top"style="border-radius: 15px; width: 2em; heigth: auto; align-self: center;">
                             <div class="card-body">
-                                <h5 class="card-title" style="font-size: 0.67em; text-align: center;"><b>-5/+4</b><br>15, Fri</h5>
+                                <h5 class="card-title" style="font-size: 0.67em; text-align: center;"><b>-5/+4</b><br>15 Fri</h5>
                             </div>
                         </div>
                     </div>
@@ -391,7 +392,7 @@
             </div>
                 <div class="row">
                     <div class="col-10" style="font-size:1.5em; color: black;"><b>Weather Graph</b></div>
-                    <div class="col-2" style="color: #979BF3; text-align: end;">Details More <i class= "fa fa-fw fa-arrow-right"></i></div>
+                    <div class="col-2" style="color: #979BF3; text-align: end;">Maximize <i class= "fa fa-fw fa-window-maximize"></i></div>
                 </div>
                 <canvas id="line-chart" height="100" width="auto"></canvas>
                 <script>
@@ -403,8 +404,8 @@
     datasets: [{ 
         data: [-4,-7,-8,-6,-3,-4,-1,2,0,2,1,4,2,-1],
         label: "London",
-        borderColor: "rgba(0, 55, 255, 0.5)",
-        fill: true,
+        borderColor: "#686AE0",
+        fill: false,
       }, 
     ]
   },
